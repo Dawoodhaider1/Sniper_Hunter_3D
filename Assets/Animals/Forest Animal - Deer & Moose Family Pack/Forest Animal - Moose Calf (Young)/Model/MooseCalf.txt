@@ -1,0 +1,32 @@
+0000-0000 BindPose
+0001-0060 loop Idle
+0062-0085 loop Attack
+0086-0111 loop Attack 01
+0113-0130 Death
+0132-0151 Death 01
+0153-0252 loop Eating
+0254-0353 loop Eating 01
+0355-0414 loop Fight Idle
+0416-0430 loop Hit Right
+0431-0445 loop Hit Left
+0446-0460 loop Hit Front
+0461-0475 loop Hit Back
+0477-0495 loop Jump
+0496-0515 Start Rest
+0516-0575 loop Rest
+0576-0595 End Rest
+0597-0610 loop Walk
+0612-0626 loop Run
+0628-0655 loop Run With Jump
+0657-0676 Lie Down
+0677-0736 loop Sleep
+0737-0756 Stand Up
+0758-0777 Jump 01
+0779-0810 loop Walk 01
+0812-0847 loop Walk Back
+0849-0890 loop Walk Smel
+
+
+
+
+

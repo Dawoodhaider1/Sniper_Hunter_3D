@@ -1,0 +1,21 @@
+0000-0000 Bind Pose
+0001-0039 loop Walk
+0041-0059 loop Run
+0061-0199 loop Eating
+0200-0259 Start Drinking
+0260-0299 loop Drinking
+0300-0359 End Drinking
+0360-0469 Lie Dawn
+0470-0569 loop Rest
+0571-0629 loop Sleeping
+0631-0699 loop fight Idle
+0700-0719 loop Hit Left
+0720-0739 loop Hit Right
+0740-0759 loop Hit Front
+0760-0779 loop Hit Back
+0780-0799 loop Attack Legs Front
+0800-0824 loop Attack Leg Back
+0825-0867 Death
+0869-0899 loop Attack Head
+0901-0938 loop Walk Back
+0940-1035 Stand Up
