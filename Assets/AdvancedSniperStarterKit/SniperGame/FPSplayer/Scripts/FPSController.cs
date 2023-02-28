@@ -22,8 +22,8 @@ public class FPSController : MonoBehaviour
     public float minimumY = -60;
     public float maximumY = 60;
     public float Speed = 30;
-    public float noiseX = 0.1f;
-    public float noiseY = 0.1f;
+    public float noiseX = 0f;
+    public float noiseY = 0f;
     public bool Noise;
     private float rotationX = 0;
     private float rotationY = 0;

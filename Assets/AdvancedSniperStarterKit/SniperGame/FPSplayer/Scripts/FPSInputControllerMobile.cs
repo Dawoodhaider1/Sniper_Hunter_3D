@@ -50,6 +50,7 @@ public class FPSInputControllerMobile : MonoBehaviour {
 		touchAim.Draw();
 		touchShoot.Draw();
 		touchZoom.Draw();
-		
-	}
+        touchJump.Draw();
+
+    }
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 [RequireComponent (typeof(AudioSource))]
 
@@ -11,9 +12,10 @@ public class GunMecanim : Gun
 	void Start ()
 	{
 		if (animator == null)
-			animator = this.GetComponent<Animator> ();
-		
-	}
+        {
+            animator = this.GetComponent<Animator>();
+        }
+    }
 
 
 	public override void UpdateGun ()
@@ -131,7 +133,7 @@ public class GunMecanim : Gun
 			if (Zooming) {
 				FPSmotor.sensitivityXMult = MouseSensitiveZoom;
 				FPSmotor.sensitivityYMult = MouseSensitiveZoom;
-				FPSmotor.Noise = true;
+				//FPSmotor.Noise = true;
 			} else {
 				FPSmotor.sensitivityXMult = MouseSensitive;
 				FPSmotor.sensitivityYMult = MouseSensitive;
@@ -165,6 +167,5 @@ public class GunMecanim : Gun
 	}
 
 
-	
 
 }

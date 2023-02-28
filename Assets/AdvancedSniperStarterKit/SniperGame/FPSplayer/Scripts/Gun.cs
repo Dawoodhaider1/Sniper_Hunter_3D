@@ -261,7 +261,7 @@ public class Gun : MonoBehaviour
 			if (Zooming) {
 				FPSmotor.sensitivityXMult = MouseSensitiveZoom;
 				FPSmotor.sensitivityYMult = MouseSensitiveZoom;
-				FPSmotor.Noise = true;
+				//FPSmotor.Noise = true;
 			} else {
 				FPSmotor.sensitivityXMult = MouseSensitive;
 				FPSmotor.sensitivityYMult = MouseSensitive;
