@@ -3,7 +3,8 @@ using System.Collections;
 
 public class FPSInputControllerMobile : MonoBehaviour {
 
-	private GunHanddle gunHanddle;
+    public static FPSInputControllerMobile Instance;
+    private GunHanddle gunHanddle;
 	private FPSController FPSmotor;
 	
 	public TouchScreenVal touchMove;
