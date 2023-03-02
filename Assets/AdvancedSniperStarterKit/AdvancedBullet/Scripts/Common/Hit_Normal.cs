@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 public class Hit_Normal : AS_BulletHiter
 {
-    public Animation anim;
+    public Animator anim;
     private Animal_AI animal_AI;
     private NavMeshAgent agent;
 
@@ -21,17 +21,12 @@ public class Hit_Normal : AS_BulletHiter
 		AddAudio (hit.point);
 		base.OnHit (hit, bullet);
         // Disable all other animations
-        foreach (AnimationState state in anim)
-        {
-            if (state.name != "Death01")
-            {
-                state.enabled = false;
-            }
-        }
         if(death == 0)
         {
             //Play the "Death" Animation
-            anim.Play("Death01");
+            anim.SetBool("Run", false);
+            anim.SetBool("Walk", false);
+            anim.SetBool("Death", true);
             animal_AI.enabled = false;
             StartCoroutine(StopAnimation());
             //Debug.Log("Death Animation Playing");
@@ -44,7 +39,6 @@ public class Hit_Normal : AS_BulletHiter
     IEnumerator StopAnimation()
     {
         yield return new WaitForSeconds(0.25f);
-        anim.Stop("Death01");
         agent.enabled = false;
     }
 }
