@@ -9,11 +9,14 @@ public class Animal_AI : MonoBehaviour
     public float safeDistance = 10.0f;
     public float speed = 30f;
 
+    public Animation anim;
+
     private Vector3 initialPosition;
     private bool isRunningAway = false;
 
     void Start()
     {
+        anim = GetComponent<Animation>();
         initialPosition = transform.position;
     }
 
@@ -25,10 +28,42 @@ public class Animal_AI : MonoBehaviour
 
             if (distanceToPlayer < safeDistance)
             {
-                RunAway();
+                isRunningAway = true;
+                // Disable all other animations
+                foreach (AnimationState state in anim)
+                {
+                    if (state.name != "Run Fast") 
+                    {
+                        state.enabled = false;
+                    }
+                }
+                // Play the "Run Fast" animation clip
+                while(distanceToPlayer < safeDistance)
+                {
+                    anim.Play("Run Fast");
+                    //yield return new WaitForSeconds(0.15f);
+                }
+                //Debug.Log("Run Animation Playing");
+                Vector3 runDirection = transform.position - Player.transform.position;
+                runDirection.Normalize();
+                Vector3 targetPosition = transform.position + runDirection * safeDistance;
+                GetComponent<UnityEngine.AI.NavMeshAgent>().destination = targetPosition;
+                Invoke("ResumeNormalActivity", 5.0f);
             }
             else
             {
+                // Disable all other animations
+                foreach (AnimationState state in anim)
+                {
+                    if (state.name != "Walk") 
+                    {
+                        state.enabled = false;
+                    }
+                }
+                // Play the "Walk" animation clip
+                anim.Play("Walk");
+                //Debug.Log("Walk Animation Playing");
+
                 // Move around randomly within a certain radius
                 Vector3 randomDirection = Random.insideUnitSphere * safeDistance;
                 randomDirection += initialPosition;
@@ -38,16 +73,6 @@ public class Animal_AI : MonoBehaviour
                 GetComponent<UnityEngine.AI.NavMeshAgent>().destination = finalPosition;
             }
         }
-    }
-
-    void RunAway()
-    {
-        isRunningAway = true;
-        Vector3 runDirection = transform.position - Player.transform.position;
-        runDirection.Normalize();
-        Vector3 targetPosition = transform.position + runDirection * safeDistance;
-        GetComponent<UnityEngine.AI.NavMeshAgent>().destination = targetPosition;
-        Invoke("ResumeNormalActivity", 5.0f);
     }
 
     void ResumeNormalActivity()
