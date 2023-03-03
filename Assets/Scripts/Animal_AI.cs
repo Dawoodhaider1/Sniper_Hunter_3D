@@ -8,7 +8,6 @@ public class Animal_AI : MonoBehaviour
     public Transform Player;
     public Transform CurrentAnimal;
     public float safeDistance = 10.0f;
-    public float speed = 30f;
     public Animator anim;
 
     private Vector3 initialPosition;
