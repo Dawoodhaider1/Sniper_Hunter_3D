@@ -9,13 +9,13 @@ public class Animal_AI : MonoBehaviour
     public Transform CurrentAnimal;
     public float safeDistance = 10.0f;
     public float speed = 30f;
-    private NavMeshAgent agent;
-
     public Animator anim;
 
     private Vector3 initialPosition;
     private bool isRunningAway = false;
     private float distanceToPlayer;
+    private NavMeshAgent agent;
+    private int x = 0;
 
     void Start()
     {
@@ -34,16 +34,23 @@ public class Animal_AI : MonoBehaviour
             {
                 RunAway();
             }
+            else if (anim.GetBool("Eating") == true)
+            {
+                agent.SetDestination(transform.position);
+                this.transform.rotation = new Quaternion(0f, transform.rotation.y, 0f, 0f);
+                this.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            }
             else
             {
-                agent.speed = 3.5f;
-                anim.SetBool("Walk", true);
+                agent.speed = 1.5f;
+
                 anim.SetBool("Run", false);
+                //agent.SetDestination(transform.forward);
                 // Move around randomly within a certain radius
-                Vector3 randomDirection = Random.insideUnitSphere * safeDistance;
+                Vector3 randomDirection = Random.insideUnitSphere * safeDistance * 30f;
                 randomDirection += initialPosition;
                 UnityEngine.AI.NavMeshHit hit;
-                UnityEngine.AI.NavMesh.SamplePosition(randomDirection , out hit, safeDistance, 1);
+                UnityEngine.AI.NavMesh.SamplePosition(randomDirection, out hit, safeDistance, 1);
                 Vector3 finalPosition = hit.position;
                 GetComponent<UnityEngine.AI.NavMeshAgent>().destination = finalPosition;
             }
@@ -54,29 +61,15 @@ public class Animal_AI : MonoBehaviour
     {
         isRunningAway = true;
         agent.speed = 20f;
-        // Disable all other animations
         // Play the "Run Fast" animation clip
-        //StartCoroutine(Running());
         anim.SetBool("Run", true);
         anim.SetBool("Walk", false);
-        Vector3 runDirection = transform.position - Player.transform.position * 10;
+        Vector3 runDirection = transform.position - Player.transform.position * 30f;
         runDirection.Normalize();
         Vector3 targetPosition = transform.position + runDirection * safeDistance;
         GetComponent<UnityEngine.AI.NavMeshAgent>().destination = targetPosition;
         Invoke("ResumeNormalActivity", 5.0f);
     }
-
-    //IEnumerator Running()
-    //{
-    //    while (distanceToPlayer < safeDistance)
-    //    {
-    //        // Play the animation
-    //        anim.Play();
-
-    //        // Wait for the animation to finish playing
-    //        yield return new WaitForSeconds(anim.clip.length);
-    //    }
-    //}
 
     void ResumeNormalActivity()
     {
