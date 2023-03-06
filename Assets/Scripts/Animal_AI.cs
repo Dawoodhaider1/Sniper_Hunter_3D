@@ -44,6 +44,7 @@ public class Animal_AI : MonoBehaviour
                 agent.speed = 1.5f;
 
                 anim.SetBool("Run", false);
+                anim.SetBool("Walk", true);
                 //agent.SetDestination(transform.forward);
                 // Move around randomly within a certain radius
                 Vector3 randomDirection = Random.insideUnitSphere * safeDistance * 30f;
