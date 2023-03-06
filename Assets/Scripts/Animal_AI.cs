@@ -35,14 +35,15 @@ public class Animal_AI : MonoBehaviour
             }
             else if (anim.GetBool("Eating") == true)
             {
-                agent.SetDestination(transform.position);
+                //agent.SetDestination(transform.position);
+                agent.isStopped = true;
                 this.transform.rotation = new Quaternion(0f, transform.rotation.y, 0f, 0f);
                 this.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             }
             else
             {
                 agent.speed = 1.5f;
-
+                agent.isStopped = false;
                 anim.SetBool("Run", false);
                 anim.SetBool("Walk", true);
                 //agent.SetDestination(transform.forward);
@@ -60,6 +61,7 @@ public class Animal_AI : MonoBehaviour
     void RunAway()
     {
         isRunningAway = true;
+        agent.isStopped = false;
         agent.speed = 20f;
         // Play the "Run Fast" animation clip
         anim.SetBool("Run", true);
