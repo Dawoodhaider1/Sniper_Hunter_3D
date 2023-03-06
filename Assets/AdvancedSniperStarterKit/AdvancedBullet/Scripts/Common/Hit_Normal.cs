@@ -27,7 +27,7 @@ public class Hit_Normal : AS_BulletHiter
             anim.SetBool("Run", false);
             anim.SetBool("Walk", false);
             anim.SetBool("Death", true);
-            animal_AI.enabled = false;
+            //animal_AI.enabled = false;
             StartCoroutine(StopAnimation());
             //Debug.Log("Death Animation Playing");
             //animal_AI.enabled = false;

@@ -5,36 +5,52 @@ using UnityEngine.AI;
 
 public class Robot_AI : MonoBehaviour
 {
-
-
     NavMeshAgent agent;
     public Vector3 Random_Destination;
     Animator anim;
+    public float safeDistance = 10.0f;
+    public Transform Player;
+    private float distanceToPlayer;
+
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
         Random_Destination = RandomNavmeshLocation(50);
         anim = GetComponent<Animator>();
-      
-
     }
 
     void Update()
     {
+        //Distance of player from the animal...
+        distanceToPlayer = Vector3.Distance(transform.position, Player.transform.position);
         //anim.SetBool("Run", false);
         //anim.SetBool("Shoot", false);
         timer += Time.deltaTime;
-        if (timer >= wanderTimer)
+        if (timer >= wanderTimer && /*to check if the animal is already dead*/anim.GetBool("Death") != true && distanceToPlayer > safeDistance)
         {
             //Agent.speed = Speed;
             Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
             agent.SetDestination(newPos);
+            anim.SetBool("Run", false);
+            anim.SetBool("Walk", true);
             agent.speed = 1.5f;
             timer = 0;
         }
+        if(distanceToPlayer < safeDistance)
+        {
+            RunAway();
+        }
     }
 
+    void RunAway()
+    {
+        Debug.Log("Fawn Running away");
+        anim.SetBool("Run", true);
+        anim.SetBool("Walk", false);
+        agent.speed = 15f;
 
+        //Invoke("ResumeNormalActivity", 5.0f);
+    }
 
     public Vector3 RandomNavmeshLocation(float radius)
     {
@@ -50,8 +66,6 @@ public class Robot_AI : MonoBehaviour
         }
         return finalPosition;
     }
-
-
 
 
     #region Wander
