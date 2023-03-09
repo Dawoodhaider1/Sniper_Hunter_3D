@@ -1,44 +1,55 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class Hit_Normal : AS_BulletHiter
 {
     public Animator anim;
-    private Animal_AI animal_AI;
     private NavMeshAgent agent;
-
     private int death = 0;
-
+    Level_Manager level;
     private void Start()
     {
-        animal_AI = GetComponent<Animal_AI>();
         agent = GetComponent<NavMeshAgent>();
+        level = GameObject.FindObjectOfType<Level_Manager>();
     }
 
     public override void OnHit (RaycastHit hit, AS_Bullet bullet)
 	{
 		AddAudio (hit.point);
 		base.OnHit (hit, bullet);
-        // Disable all other animations
         if(death == 0)
         {
-            //Play the "Death" Animation
-            anim.SetBool("Run", false);
-            anim.SetBool("Walk", false);
-            anim.SetBool("Death", true);
-            //animal_AI.enabled = false;
             StartCoroutine(StopAnimation());
-            //Debug.Log("Death Animation Playing");
-            //animal_AI.enabled = false;
-            //agent.enabled = false;
             death++;
         }
     }
 
     IEnumerator StopAnimation()
     {
-        yield return new WaitForSeconds(0.25f);
-        agent.enabled = false;
+        anim.SetBool("Death", true);
+        anim.SetBool("Run", false);
+        anim.SetBool("Walk", false);
+        yield return new WaitForSeconds(0.2f);
+        agent.isStopped = true;
+        GetComponent<Rigidbody>().isKinematic = true;
+        yield return new WaitForSeconds(3f);
+        if(level!=null)
+        {
+            for(int i=0;i<level.Name.Count;i++)
+            {
+                if (gameObject.name == level.Name[i])
+                {
+                    GameManager.Instance.UpdateScore();
+                    level.Name.RemoveAt(i);
+                }
+            }
+          
+        }
+        //GameManager.Instance.UpdateScore();
+        gameObject.SetActive(false);
+        //Destroy(gameObject);
     }
+
 }

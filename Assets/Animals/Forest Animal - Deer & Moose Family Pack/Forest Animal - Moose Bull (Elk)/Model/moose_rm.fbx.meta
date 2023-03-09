@@ -1,150 +1,391 @@
 fileFormatVersion: 2
 guid: 697b5742208bbea4e90cafaf81d6b243
-timeCreated: 1452641937
-licenseType: Store
 ModelImporter:
-  serializedVersion: 18
-  fileIDToRecycleName:
-    100000: DS_beard
-    100002: DS_Ear_L
-    100004: DS_Ear_R
-    100006: DS_Head_JawSHJnt
-    100008: DS_Head_TopSHJnt
-    100010: DS_l_Clavicle_01_01SHJnt
-    100012: DS_l_FrontLeg_AnkleSHJnt
-    100014: DS_l_FrontLeg_BallSHJnt
-    100016: DS_l_FrontLeg_HipSHJnt
-    100018: DS_l_FrontLeg_KneeSHJnt
-    100020: DS_l_HindLeg_AnkleSHJnt
-    100022: DS_l_HindLeg_BallSHJnt
-    100024: DS_l_HindLeg_HipSHJnt
-    100026: DS_l_HindLeg_Knee1SHJnt
-    100028: DS_l_HindLeg_Knee2SHJnt
-    100030: DS_Neck_01SHJnt
-    100032: DS_Neck_02SHJnt
-    100034: DS_Neck_TopSHJnt
-    100036: DS_r_Clavicle_01_01SHJnt
-    100038: DS_r_FrontLeg_AnkleSHJnt
-    100040: DS_r_FrontLeg_BallSHJnt
-    100042: DS_r_FrontLeg_HipSHJnt
-    100044: DS_r_FrontLeg_KneeSHJnt
-    100046: DS_r_HindLeg_AnkleSHJnt
-    100048: DS_r_HindLeg_BallSHJnt
-    100050: DS_r_HindLeg_HipSHJnt
-    100052: DS_r_HindLeg_Knee1SHJnt
-    100054: DS_r_HindLeg_Knee2SHJnt
-    100056: DS_ROOTSHJnt
-    100058: DS_Spine_01SHJnt
-    100060: DS_Spine_02SHJnt
-    100062: DS_Spine_03SHJnt
-    100064: DS_Spine_04SHJnt
-    100066: DS_Spine_TopSHJnt
-    100068: DS_Tail_01_01SHJnt
-    100070: DS_Tail_01_02SHJnt
-    100072: DS_Tail_01_03SHJnt
-    100074: //RootNode
-    100076: MooseHP_msh
-    100078: MooseLP_msh
-    100080: MooseSHP_msh
-    400000: DS_beard
-    400002: DS_Ear_L
-    400004: DS_Ear_R
-    400006: DS_Head_JawSHJnt
-    400008: DS_Head_TopSHJnt
-    400010: DS_l_Clavicle_01_01SHJnt
-    400012: DS_l_FrontLeg_AnkleSHJnt
-    400014: DS_l_FrontLeg_BallSHJnt
-    400016: DS_l_FrontLeg_HipSHJnt
-    400018: DS_l_FrontLeg_KneeSHJnt
-    400020: DS_l_HindLeg_AnkleSHJnt
-    400022: DS_l_HindLeg_BallSHJnt
-    400024: DS_l_HindLeg_HipSHJnt
-    400026: DS_l_HindLeg_Knee1SHJnt
-    400028: DS_l_HindLeg_Knee2SHJnt
-    400030: DS_Neck_01SHJnt
-    400032: DS_Neck_02SHJnt
-    400034: DS_Neck_TopSHJnt
-    400036: DS_r_Clavicle_01_01SHJnt
-    400038: DS_r_FrontLeg_AnkleSHJnt
-    400040: DS_r_FrontLeg_BallSHJnt
-    400042: DS_r_FrontLeg_HipSHJnt
-    400044: DS_r_FrontLeg_KneeSHJnt
-    400046: DS_r_HindLeg_AnkleSHJnt
-    400048: DS_r_HindLeg_BallSHJnt
-    400050: DS_r_HindLeg_HipSHJnt
-    400052: DS_r_HindLeg_Knee1SHJnt
-    400054: DS_r_HindLeg_Knee2SHJnt
-    400056: DS_ROOTSHJnt
-    400058: DS_Spine_01SHJnt
-    400060: DS_Spine_02SHJnt
-    400062: DS_Spine_03SHJnt
-    400064: DS_Spine_04SHJnt
-    400066: DS_Spine_TopSHJnt
-    400068: DS_Tail_01_01SHJnt
-    400070: DS_Tail_01_02SHJnt
-    400072: DS_Tail_01_03SHJnt
-    400074: //RootNode
-    400076: MooseHP_msh
-    400078: MooseLP_msh
-    400080: MooseSHP_msh
-    4300000: MooseHP_msh
-    4300002: MooseSHP_msh
-    4300004: MooseLP_msh
-    7400000: Idle
-    7400002: Run
-    7400004: Run With Jump
-    7400006: Run Fast
-    7400008: Walk
-    7400010: Walk Eating
-    7400012: Eating
-    7400014: Jump
-    7400016: Idle01
-    7400018: Idle02
-    7400020: Lie Down
-    7400022: Rest
-    7400024: Stand Up
-    7400026: Fight Idle
-    7400028: Attack Back
-    7400030: Attack Front
-    7400032: Hit Left
-    7400034: Hit Right
-    7400036: Hit Front
-    7400038: Hit Back
-    7400040: Death
-    7400042: Death01
-    7400044: Roar
-    7400046: Walk Back
-    7400048: Run Attack
-    7400050: Walk Fight
-    7400052: Walk Fight Back
-    7400054: Run Attack 01 (Bonus)
-    9500000: //RootNode
-    13700000: MooseHP_msh
-    13700002: MooseLP_msh
-    13700004: MooseSHP_msh
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: DS_beard
+  - first:
+      1: 100002
+    second: DS_Ear_L
+  - first:
+      1: 100004
+    second: DS_Ear_R
+  - first:
+      1: 100006
+    second: DS_Head_JawSHJnt
+  - first:
+      1: 100008
+    second: DS_Head_TopSHJnt
+  - first:
+      1: 100010
+    second: DS_l_Clavicle_01_01SHJnt
+  - first:
+      1: 100012
+    second: DS_l_FrontLeg_AnkleSHJnt
+  - first:
+      1: 100014
+    second: DS_l_FrontLeg_BallSHJnt
+  - first:
+      1: 100016
+    second: DS_l_FrontLeg_HipSHJnt
+  - first:
+      1: 100018
+    second: DS_l_FrontLeg_KneeSHJnt
+  - first:
+      1: 100020
+    second: DS_l_HindLeg_AnkleSHJnt
+  - first:
+      1: 100022
+    second: DS_l_HindLeg_BallSHJnt
+  - first:
+      1: 100024
+    second: DS_l_HindLeg_HipSHJnt
+  - first:
+      1: 100026
+    second: DS_l_HindLeg_Knee1SHJnt
+  - first:
+      1: 100028
+    second: DS_l_HindLeg_Knee2SHJnt
+  - first:
+      1: 100030
+    second: DS_Neck_01SHJnt
+  - first:
+      1: 100032
+    second: DS_Neck_02SHJnt
+  - first:
+      1: 100034
+    second: DS_Neck_TopSHJnt
+  - first:
+      1: 100036
+    second: DS_r_Clavicle_01_01SHJnt
+  - first:
+      1: 100038
+    second: DS_r_FrontLeg_AnkleSHJnt
+  - first:
+      1: 100040
+    second: DS_r_FrontLeg_BallSHJnt
+  - first:
+      1: 100042
+    second: DS_r_FrontLeg_HipSHJnt
+  - first:
+      1: 100044
+    second: DS_r_FrontLeg_KneeSHJnt
+  - first:
+      1: 100046
+    second: DS_r_HindLeg_AnkleSHJnt
+  - first:
+      1: 100048
+    second: DS_r_HindLeg_BallSHJnt
+  - first:
+      1: 100050
+    second: DS_r_HindLeg_HipSHJnt
+  - first:
+      1: 100052
+    second: DS_r_HindLeg_Knee1SHJnt
+  - first:
+      1: 100054
+    second: DS_r_HindLeg_Knee2SHJnt
+  - first:
+      1: 100056
+    second: DS_ROOTSHJnt
+  - first:
+      1: 100058
+    second: DS_Spine_01SHJnt
+  - first:
+      1: 100060
+    second: DS_Spine_02SHJnt
+  - first:
+      1: 100062
+    second: DS_Spine_03SHJnt
+  - first:
+      1: 100064
+    second: DS_Spine_04SHJnt
+  - first:
+      1: 100066
+    second: DS_Spine_TopSHJnt
+  - first:
+      1: 100068
+    second: DS_Tail_01_01SHJnt
+  - first:
+      1: 100070
+    second: DS_Tail_01_02SHJnt
+  - first:
+      1: 100072
+    second: DS_Tail_01_03SHJnt
+  - first:
+      1: 100074
+    second: //RootNode
+  - first:
+      1: 100076
+    second: MooseHP_msh
+  - first:
+      1: 100078
+    second: MooseLP_msh
+  - first:
+      1: 100080
+    second: MooseSHP_msh
+  - first:
+      4: 400000
+    second: DS_beard
+  - first:
+      4: 400002
+    second: DS_Ear_L
+  - first:
+      4: 400004
+    second: DS_Ear_R
+  - first:
+      4: 400006
+    second: DS_Head_JawSHJnt
+  - first:
+      4: 400008
+    second: DS_Head_TopSHJnt
+  - first:
+      4: 400010
+    second: DS_l_Clavicle_01_01SHJnt
+  - first:
+      4: 400012
+    second: DS_l_FrontLeg_AnkleSHJnt
+  - first:
+      4: 400014
+    second: DS_l_FrontLeg_BallSHJnt
+  - first:
+      4: 400016
+    second: DS_l_FrontLeg_HipSHJnt
+  - first:
+      4: 400018
+    second: DS_l_FrontLeg_KneeSHJnt
+  - first:
+      4: 400020
+    second: DS_l_HindLeg_AnkleSHJnt
+  - first:
+      4: 400022
+    second: DS_l_HindLeg_BallSHJnt
+  - first:
+      4: 400024
+    second: DS_l_HindLeg_HipSHJnt
+  - first:
+      4: 400026
+    second: DS_l_HindLeg_Knee1SHJnt
+  - first:
+      4: 400028
+    second: DS_l_HindLeg_Knee2SHJnt
+  - first:
+      4: 400030
+    second: DS_Neck_01SHJnt
+  - first:
+      4: 400032
+    second: DS_Neck_02SHJnt
+  - first:
+      4: 400034
+    second: DS_Neck_TopSHJnt
+  - first:
+      4: 400036
+    second: DS_r_Clavicle_01_01SHJnt
+  - first:
+      4: 400038
+    second: DS_r_FrontLeg_AnkleSHJnt
+  - first:
+      4: 400040
+    second: DS_r_FrontLeg_BallSHJnt
+  - first:
+      4: 400042
+    second: DS_r_FrontLeg_HipSHJnt
+  - first:
+      4: 400044
+    second: DS_r_FrontLeg_KneeSHJnt
+  - first:
+      4: 400046
+    second: DS_r_HindLeg_AnkleSHJnt
+  - first:
+      4: 400048
+    second: DS_r_HindLeg_BallSHJnt
+  - first:
+      4: 400050
+    second: DS_r_HindLeg_HipSHJnt
+  - first:
+      4: 400052
+    second: DS_r_HindLeg_Knee1SHJnt
+  - first:
+      4: 400054
+    second: DS_r_HindLeg_Knee2SHJnt
+  - first:
+      4: 400056
+    second: DS_ROOTSHJnt
+  - first:
+      4: 400058
+    second: DS_Spine_01SHJnt
+  - first:
+      4: 400060
+    second: DS_Spine_02SHJnt
+  - first:
+      4: 400062
+    second: DS_Spine_03SHJnt
+  - first:
+      4: 400064
+    second: DS_Spine_04SHJnt
+  - first:
+      4: 400066
+    second: DS_Spine_TopSHJnt
+  - first:
+      4: 400068
+    second: DS_Tail_01_01SHJnt
+  - first:
+      4: 400070
+    second: DS_Tail_01_02SHJnt
+  - first:
+      4: 400072
+    second: DS_Tail_01_03SHJnt
+  - first:
+      4: 400074
+    second: //RootNode
+  - first:
+      4: 400076
+    second: MooseHP_msh
+  - first:
+      4: 400078
+    second: MooseLP_msh
+  - first:
+      4: 400080
+    second: MooseSHP_msh
+  - first:
+      43: 4300000
+    second: MooseHP_msh
+  - first:
+      43: 4300002
+    second: MooseSHP_msh
+  - first:
+      43: 4300004
+    second: MooseLP_msh
+  - first:
+      74: 7400000
+    second: Idle
+  - first:
+      74: 7400002
+    second: Run
+  - first:
+      74: 7400004
+    second: Run With Jump
+  - first:
+      74: 7400006
+    second: Run Fast
+  - first:
+      74: 7400008
+    second: Walk
+  - first:
+      74: 7400010
+    second: Walk Eating
+  - first:
+      74: 7400012
+    second: Eating
+  - first:
+      74: 7400014
+    second: Jump
+  - first:
+      74: 7400016
+    second: Idle01
+  - first:
+      74: 7400018
+    second: Idle02
+  - first:
+      74: 7400020
+    second: Lie Down
+  - first:
+      74: 7400022
+    second: Rest
+  - first:
+      74: 7400024
+    second: Stand Up
+  - first:
+      74: 7400026
+    second: Fight Idle
+  - first:
+      74: 7400028
+    second: Attack Back
+  - first:
+      74: 7400030
+    second: Attack Front
+  - first:
+      74: 7400032
+    second: Hit Left
+  - first:
+      74: 7400034
+    second: Hit Right
+  - first:
+      74: 7400036
+    second: Hit Front
+  - first:
+      74: 7400038
+    second: Hit Back
+  - first:
+      74: 7400040
+    second: Death
+  - first:
+      74: 7400042
+    second: Death01
+  - first:
+      74: 7400044
+    second: Roar
+  - first:
+      74: 7400046
+    second: Walk Back
+  - first:
+      74: 7400048
+    second: Run Attack
+  - first:
+      74: 7400050
+    second: Walk Fight
+  - first:
+      74: 7400052
+    second: Walk Fight Back
+  - first:
+      74: 7400054
+    second: Run Attack 01 (Bonus)
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: MooseHP_msh
+  - first:
+      137: 13700002
+    second: MooseLP_msh
+  - first:
+      137: 13700004
+    second: MooseSHP_msh
+  externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 0
-    animationRotationError: .5
-    animationPositionError: .5
-    animationScaleError: .5
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: Idle
       takeName: 
+      internalID: 0
       firstFrame: 2
       lastFrame: 23
       wrapMode: 0
@@ -152,6 +393,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -168,9 +410,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Run
       takeName: 
+      internalID: 0
       firstFrame: 25
       lastFrame: 38
       wrapMode: 0
@@ -178,6 +422,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -194,9 +439,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Run With Jump
       takeName: 
+      internalID: 0
       firstFrame: 40
       lastFrame: 66
       wrapMode: 0
@@ -204,6 +451,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -220,9 +468,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Run Fast
       takeName: 
+      internalID: 0
       firstFrame: 67
       lastFrame: 80
       wrapMode: 0
@@ -230,6 +480,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -246,9 +497,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Walk
       takeName: 
+      internalID: 0
       firstFrame: 81
       lastFrame: 110
       wrapMode: 0
@@ -256,7 +509,8 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
-      loopTime: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -272,9 +526,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Walk Eating
       takeName: 
+      internalID: 0
       firstFrame: 113
       lastFrame: 165
       wrapMode: 0
@@ -282,6 +538,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -298,9 +555,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Eating
       takeName: 
+      internalID: 0
       firstFrame: 167
       lastFrame: 225
       wrapMode: 0
@@ -308,6 +567,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -324,9 +584,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Jump
       takeName: 
+      internalID: 0
       firstFrame: 227
       lastFrame: 258
       wrapMode: 0
@@ -334,6 +596,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -350,9 +613,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Idle01
       takeName: 
+      internalID: 0
       firstFrame: 260
       lastFrame: 377
       wrapMode: 0
@@ -360,6 +625,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -376,9 +642,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Idle02
       takeName: 
+      internalID: 0
       firstFrame: 380
       lastFrame: 469
       wrapMode: 0
@@ -386,6 +654,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -402,9 +671,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Lie Down
       takeName: 
+      internalID: 0
       firstFrame: 471
       lastFrame: 489
       wrapMode: 0
@@ -412,6 +683,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -428,9 +700,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Rest
       takeName: 
+      internalID: 0
       firstFrame: 490
       lastFrame: 549
       wrapMode: 0
@@ -438,6 +712,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -454,9 +729,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Stand Up
       takeName: 
+      internalID: 0
       firstFrame: 550
       lastFrame: 570
       wrapMode: 0
@@ -464,6 +741,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -480,9 +758,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Fight Idle
       takeName: 
+      internalID: 0
       firstFrame: 572
       lastFrame: 629
       wrapMode: 0
@@ -490,6 +770,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -506,9 +787,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Attack Back
       takeName: 
+      internalID: 0
       firstFrame: 630
       lastFrame: 654
       wrapMode: 0
@@ -516,6 +799,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -532,9 +816,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Attack Front
       takeName: 
+      internalID: 0
       firstFrame: 655
       lastFrame: 679
       wrapMode: 0
@@ -542,6 +828,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -558,9 +845,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Hit Left
       takeName: 
+      internalID: 0
       firstFrame: 680
       lastFrame: 694
       wrapMode: 0
@@ -568,6 +857,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -584,9 +874,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Hit Right
       takeName: 
+      internalID: 0
       firstFrame: 695
       lastFrame: 709
       wrapMode: 0
@@ -594,6 +886,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -610,9 +903,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Hit Front
       takeName: 
+      internalID: 0
       firstFrame: 710
       lastFrame: 724
       wrapMode: 0
@@ -620,6 +915,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -636,9 +932,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Hit Back
       takeName: 
+      internalID: 0
       firstFrame: 725
       lastFrame: 740
       wrapMode: 0
@@ -646,6 +944,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -662,9 +961,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Death
       takeName: 
+      internalID: 0
       firstFrame: 741
       lastFrame: 758
       wrapMode: 0
@@ -672,6 +973,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -688,9 +990,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Death01
       takeName: 
+      internalID: 0
       firstFrame: 759
       lastFrame: 774
       wrapMode: 0
@@ -698,6 +1002,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -714,9 +1019,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Roar
       takeName: 
+      internalID: 0
       firstFrame: 776
       lastFrame: 854
       wrapMode: 0
@@ -724,6 +1031,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -740,9 +1048,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Walk Back
       takeName: 
+      internalID: 0
       firstFrame: 856
       lastFrame: 885
       wrapMode: 0
@@ -750,6 +1060,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -766,9 +1077,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Run Attack
       takeName: 
+      internalID: 0
       firstFrame: 887
       lastFrame: 900
       wrapMode: 0
@@ -776,6 +1089,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -792,9 +1106,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Walk Fight
       takeName: 
+      internalID: 0
       firstFrame: 901
       lastFrame: 928
       wrapMode: 0
@@ -802,6 +1118,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -818,9 +1135,11 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Walk Fight Back
       takeName: 
+      internalID: 0
       firstFrame: 929
       lastFrame: 956
       wrapMode: 0
@@ -828,6 +1147,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -844,44 +1164,72 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 1
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
-    armTwist: .5
-    foreArmTwist: .5
-    upperLegTwist: .5
-    legTwist: .5
-    armStretch: .0500000007
-    legStretch: .0500000007
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: DS_ROOTSHJnt
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

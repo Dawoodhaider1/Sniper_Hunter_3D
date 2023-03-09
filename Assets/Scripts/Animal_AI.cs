@@ -14,7 +14,6 @@ public class Animal_AI : MonoBehaviour
     private bool isRunningAway = false;
     private float distanceToPlayer;
     private NavMeshAgent agent;
-    private int x = 0;
 
     void Start()
     {
