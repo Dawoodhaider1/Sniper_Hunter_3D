@@ -1,11 +1,18 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SplashScreen : MonoBehaviour
 {
     public Slider loadingSlider;
     public float loadingTime = 5f;
+
+    public bool LevelSelection = false;
+    private int CurrentSceneNumber;
+
+    public GameObject LevelSelectionPanel;
+    public GameObject LoadingScreen;
 
     //private void Start()
     //{
@@ -24,7 +31,20 @@ public class SplashScreen : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1.5f);
-        Application.LoadLevel("MainMenu");
+
+        Scene activeScene = SceneManager.GetActiveScene();
+        int sceneNumber = activeScene.buildIndex;
+
+        if (sceneNumber == 1)
+        {
+            LevelSelection = true;
+            LevelSelectionPanel.SetActive(true);
+            LoadingScreen.SetActive(false);
+        }
+        else if (sceneNumber == 0)
+        {
+            Application.LoadLevel("MainMenu");
+        }
         // Do something after the loading is complete, such as loading the next scene or enabling the game controls.
     }
 

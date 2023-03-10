@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    SplashScreen splashScreen;
+    public GameObject LevelSelectionPanel;
+    public GameObject LoadingScene;
+
+    private void Start()
+    {
+        splashScreen = FindObjectOfType<SplashScreen>();
+    }
+
     public void ExitGame()
     {
         Application.Quit();
@@ -30,5 +39,19 @@ public class MainMenu : MonoBehaviour
     public void NoAds()
     {
         Application.OpenURL("https://play.google.com/store/apps/dev?id=5360866347787636750");
+    }
+
+    public void Main_Menu()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
+
+    public void LevelSelection()
+    {
+        if (splashScreen.LevelSelection == true)
+        {
+            LevelSelectionPanel.SetActive(true);
+            LoadingScene.SetActive(false);
+        }
     }
 }
