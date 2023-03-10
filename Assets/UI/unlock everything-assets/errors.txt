@@ -1,0 +1,11 @@
+[2023-3-6 14:08:04] layer "pngfind.com-hairstyle-transparent-male-png-3000598": Expected end of input but "-" found.
+[2023-3-6 14:08:04] layer "pngfind.com-hairstyle-transparent-male-png-3000598 copy": Expected end of input but "-" found.
+[2023-3-6 14:08:04] layer "pngwing.com (95) copy": Expected end of input but "(" found.
+[2023-3-6 14:08:04] layer "pngwing.com (95) copy 2": Expected end of input but "(" found.
+[2023-3-6 14:08:04] layer "pngwing.com (92)": Expected end of input but "(" found.
+[2023-3-6 14:08:04] layer "pngwing.com (92) copy 2": Expected end of input but "(" found.
+[2023-3-6 14:08:04] layer "pngwing.com (92) copy 3": Expected end of input but "(" found.
+[2023-3-6 14:08:04] layer "pngwing.com (92) copy": Expected end of input but "(" found.
+[2023-3-6 14:08:04] layer "pngaaa.com-3244127": Unsupported extension: com
+[2023-3-6 14:08:04] layer "pngaaa.com-3244127": Invalid quality: 32441270
+[2023-3-6 14:08:04] layer "pngfind.com-hairstyle-transparent-male-png-3000598": Expected end of input but "-" found.

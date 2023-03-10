@@ -1,0 +1,6 @@
+[2023-3-6 13:32:42] layer "Btn_1.png copy": Expected end of input but "c" found.
+[2023-3-6 13:32:42] layer "Btn_2.png  copy": Expected end of input but "c" found.
+[2023-3-6 13:32:42] layer "Btn_3.png copy": Expected end of input but "c" found.
+[2023-3-6 13:31:27] layer "image_star 2.png copy": Expected end of input but "c" found.
+[2023-3-6 13:31:27] layer "Coin.png copy": Expected end of input but "c" found.
+[2023-3-6 13:31:27] layer "Coin.png copy 2": Expected end of input but "c" found.

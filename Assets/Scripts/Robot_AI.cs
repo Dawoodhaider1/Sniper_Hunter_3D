@@ -23,9 +23,10 @@ public class Robot_AI : MonoBehaviour
     {
         //Distance of player from the animal...
         distanceToPlayer = Vector3.Distance(transform.position, Player.transform.position);
-
+        //anim.SetBool("Run", false);
+        //anim.SetBool("Shoot", false);
         timer += Time.deltaTime;
-        if (timer >= wanderTimer && /*to check if the animal is already dead*/anim.GetBool("Death") != true && distanceToPlayer > safeDistance)//safe distance check)
+        if (timer >= wanderTimer && /*to check if the animal is already dead*/anim.GetBool("Death") != true && distanceToPlayer > safeDistance)
         {
             //Agent.speed = Speed;
             Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
@@ -43,7 +44,7 @@ public class Robot_AI : MonoBehaviour
 
     void RunAway()
     {
-        //Debug.Log("Fawn Running away");
+        Debug.Log("Fawn Running away");
         anim.SetBool("Run", true);
         anim.SetBool("Walk", false);
         agent.speed = 15f;

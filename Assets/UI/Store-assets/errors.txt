@@ -1,0 +1,8 @@
+[2023-3-6 13:09:22] layer "pngwing.com (53)": Expected end of input but "(" found.
+[2023-3-6 13:09:22] layer "pngwing.com (53)": Expected end of input but "(" found.
+[2023-3-6 13:09:22] layer "pngaaa.com-3244127": Unsupported extension: com
+[2023-3-6 13:09:22] layer "pngaaa.com-3244127": Invalid quality: 32441270
+[2023-3-6 13:09:22] layer "pngaaa.com-3244127 copy": Expected end of input but "c" found.
+[2023-3-6 13:09:22] layer "pngaaa.com-3243988": Unsupported extension: com
+[2023-3-6 13:09:22] layer "pngaaa.com-3243988": Invalid quality: 32439880
+[2023-3-6 13:09:22] layer "pngwing.com (53)": Expected end of input but "(" found.

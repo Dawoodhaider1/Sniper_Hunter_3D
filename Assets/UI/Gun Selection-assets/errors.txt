@@ -1,0 +1,7 @@
+[2023-3-3 18:00:24] layer "pngwing.com (85)": Expected end of input but "(" found.
+[2023-3-3 18:00:24] layer "bar_att bar bg.png": Duplicate path: bar_att bar bg.png
+[2023-3-3 18:00:24] layer "bar_att bar bg.png": Duplicate path: bar_att bar bg.png
+[2023-3-3 18:00:24] layer "bar_att bar bg.png": Duplicate path: bar_att bar bg.png
+[2023-3-3 18:00:24] layer "attfgbar.png copy": Expected end of input but "c" found.
+[2023-3-3 18:00:24] layer "attfgbar.png copy 2": Expected end of input but "c" found.
+[2023-3-3 18:00:24] layer "attfgbar.png copy 3": Expected end of input but "c" found.
