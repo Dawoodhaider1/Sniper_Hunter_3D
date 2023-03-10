@@ -4,14 +4,6 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    SplashScreen splashScreen;
-    public GameObject LevelSelectionPanel;
-    public GameObject LoadingScene;
-
-    private void Start()
-    {
-        splashScreen = FindObjectOfType<SplashScreen>();
-    }
 
     public void ExitGame()
     {
@@ -46,12 +38,4 @@ public class MainMenu : MonoBehaviour
         Application.LoadLevel(Application.loadedLevel);
     }
 
-    public void LevelSelection()
-    {
-        if (splashScreen.LevelSelection == true)
-        {
-            LevelSelectionPanel.SetActive(true);
-            LoadingScene.SetActive(false);
-        }
-    }
 }

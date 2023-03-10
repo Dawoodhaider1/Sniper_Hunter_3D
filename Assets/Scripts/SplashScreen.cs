@@ -8,7 +8,6 @@ public class SplashScreen : MonoBehaviour
     public Slider loadingSlider;
     public float loadingTime = 5f;
 
-    public bool LevelSelection = false;
     private int CurrentSceneNumber;
 
     public GameObject LevelSelectionPanel;
@@ -37,7 +36,6 @@ public class SplashScreen : MonoBehaviour
 
         if (sceneNumber == 1)
         {
-            LevelSelection = true;
             LevelSelectionPanel.SetActive(true);
             LoadingScreen.SetActive(false);
         }
