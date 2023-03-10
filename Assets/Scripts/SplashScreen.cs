@@ -7,10 +7,10 @@ public class SplashScreen : MonoBehaviour
     public Slider loadingSlider;
     public float loadingTime = 5f;
 
-    private void Start()
-    {
-        StartCoroutine(Loading());
-    }
+    //private void Start()
+    //{
+    //    StartCoroutine(Loading());
+    //}
 
     private IEnumerator Loading()
     {
@@ -26,5 +26,10 @@ public class SplashScreen : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         Application.LoadLevel("MainMenu");
         // Do something after the loading is complete, such as loading the next scene or enabling the game controls.
+    }
+
+    public void Loading_Bar()
+    {
+        StartCoroutine(Loading());
     }
 }
