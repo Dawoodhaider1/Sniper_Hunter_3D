@@ -35,7 +35,7 @@ public class MainMenu : MonoBehaviour
 
     public void Main_Menu()
     {
-        Application.LoadLevel(Application.loadedLevel);
+        Application.LoadLevel("MainMenu");
     }
 
 }
