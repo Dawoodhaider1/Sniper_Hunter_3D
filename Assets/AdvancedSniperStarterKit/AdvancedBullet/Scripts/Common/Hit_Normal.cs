@@ -41,7 +41,7 @@ public class Hit_Normal : AS_BulletHiter
             {
                 if (gameObject.name == level.Name[i])
                 {
-                    GameManager.Instance.UpdateScore();
+                    GamePlay.Instance.UpdateScore();
                     level.Name.RemoveAt(i);
                 }
             }

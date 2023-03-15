@@ -1,14 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public Level_Manager level_Manager;
-    public int score = 0;
-    public Text Score_Text;
+
+    //For Level Selection Panel
+    public int Level_Index = 0;
+    public int Selected_Level;
+    public int Unlocked_Level = 0;
+    public int Gun_Number;
+    public int Coins = 0;
+
+    public int[] Purchased_Guns = new int[9];
+    public bool[] Purchased = new bool[9];
 
     private void Awake()
     {
@@ -20,27 +28,62 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        //SaveUserData();
+        LoadUserData();
     }
 
-    private void Start()
+    [System.Serializable]
+    class SaveData
     {
-        level_Manager = FindObjectOfType<Level_Manager>();
+        public int Level_Index;
+        public int Unlocked_Level;
+        public int[] unlocked_Levels = new int[14];
+        public int coins;
+        //public int[] purchased_Bikes = new int[4];
+        //public bool[] purchased = new bool[4];
     }
 
-    public void UpdateScore()
+    public void SaveUserData()
     {
-        score += 1;
-        Score_Text.text = score.ToString();
-        if (score >= level_Manager.count)
+        SaveData data = new SaveData();
+        data.Unlocked_Level = Unlocked_Level;
+        data.coins = Coins;
+        ////Saving the purchased bikes
+        //for (int i = 0; i < Purchased_Bikes.Length; i++)
+        //{
+        //    data.purchased_Bikes[i] = Purchased_Bikes[i];
+        //}
+        //for (int i = 0; i < Purchased.Length; i++)
+        //{
+        //    data.purchased[i] = Purchased[i];
+        //}
+
+        string json = JsonUtility.ToJson(data);
+
+        File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
+    }
+
+    public void LoadUserData()
+    {
+        string path = Application.persistentDataPath + "/savefile.json";
+        if (File.Exists(path))
         {
-            StartCoroutine(Level_Completed());
+            string json = File.ReadAllText(path);
+            SaveData data = JsonUtility.FromJson<SaveData>(json);
+            Unlocked_Level = data.Unlocked_Level;
+            Coins = data.coins;
+
+            //for (int i = 0; i < Purchased_Bikes.Length; i++)
+            //{
+            //    Purchased_Bikes[i] = data.purchased_Bikes[i];
+            //}
+            //for (int i = 0; i < Purchased.Length; i++)
+            //{
+            //    Purchased[i] = data.purchased[i];
+            //}
         }
     }
 
-    IEnumerator Level_Completed()
-    {
-        yield return new WaitForSeconds(1f);
-        Debug.Log("Level" + level_Manager.count + " Completed");
-        Time.timeScale = 0;
-    }
+
 }

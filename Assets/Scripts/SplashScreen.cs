@@ -8,8 +8,6 @@ public class SplashScreen : MonoBehaviour
     public Slider loadingSlider;
     public float loadingTime = 5f;
 
-    private int CurrentSceneNumber;
-
     public GameObject LevelSelectionPanel;
     public GameObject LoadingScreen;
 
