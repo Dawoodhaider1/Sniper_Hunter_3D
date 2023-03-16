@@ -11,6 +11,9 @@ public class SplashScreen : MonoBehaviour
     public GameObject LevelSelectionPanel;
     public GameObject LoadingScreen;
 
+    public GameObject CoinBar;
+    public GameObject SettingsButton;
+
     //private void Start()
     //{
     //    StartCoroutine(Loading());
@@ -36,6 +39,9 @@ public class SplashScreen : MonoBehaviour
         {
             LevelSelectionPanel.SetActive(true);
             LoadingScreen.SetActive(false);
+            CoinBar.SetActive(true);
+            SettingsButton.SetActive(true);
+
         }
         else if (sceneNumber == 0)
         {

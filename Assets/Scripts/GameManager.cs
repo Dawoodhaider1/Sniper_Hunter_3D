@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public int Selected_Level;
     public int Unlocked_Level = 0;
     public int Gun_Number;
-    public int Coins = 0;
+    public int Coins;
 
     public int[] Purchased_Guns = new int[9];
     public bool[] Purchased = new bool[9];
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         //SaveUserData();
-        LoadUserData();
+        //LoadUserData();
     }
 
     [System.Serializable]
