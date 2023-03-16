@@ -43,6 +43,7 @@ public class Hit_Normal : AS_BulletHiter
                 {
                     GamePlay.Instance.UpdateScore();
                     level.Name.RemoveAt(i);
+                    GameManager.Instance.Coins += Random.Range(200, 500);
                 }
             }
           

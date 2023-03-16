@@ -42,6 +42,10 @@ public class FPSInputControllerMobile : MonoBehaviour {
 		if(touchZoom.OnTouchRelease()){
 			gunHanddle.ZoomToggle();
 		}
+        if (touchZoom.OnTouchRelease())
+        {
+            FPSmotor.Jump(true);
+        }
 	}
 	
 	

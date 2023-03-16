@@ -5,7 +5,7 @@ public class TimerStopwatch : MonoBehaviour
 {
     public Text timerText;
     public GameObject LevelFailedPanel;
-    private float startTime = 60f;
+    public float startTime = 60f;
 
     void Update()
     {
