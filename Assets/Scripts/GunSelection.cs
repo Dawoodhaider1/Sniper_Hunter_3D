@@ -30,7 +30,6 @@ public class GunSelection : MonoBehaviour
             }
             else
             {
-                //Debug.Log("Bike" + j + "Purchased");
                 Buy_Button.SetActive(true);
                 Select_Button.SetActive(false);
             }
@@ -42,7 +41,6 @@ public class GunSelection : MonoBehaviour
     {
         for (int j = 0; j < 9/*MainManager.Instance.Purchased_Bikes.Length*/; j++)
         {
-            //Debug.Log("Loop executing time" + j);
             if (currentGun > 0 && GameManager.Instance.Purchased[currentGun - 1] == false && GameManager.Instance.Purchased_Guns[j] == 0)
             {
                 Buy_Button.SetActive(true);

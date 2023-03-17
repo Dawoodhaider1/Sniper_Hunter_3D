@@ -6,11 +6,15 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject playerPrefab;
     public Transform[] spawnPoints;
-    public bool Level_1;
-    public bool Level_2;
-    public bool Level_3;
-    public bool Level_4;
-    public bool Level_5;
+    Transform spawnPoint = null;
+
+    //public bool Level_1;
+    //public bool Level_2;
+    //public bool Level_3;
+    //public bool Level_4;
+    //public bool Level_5;
+
+    //public bool[] Levels;
 
     void Start()
     {
@@ -19,37 +23,44 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnPlayer()
     {
-        Transform spawnPoint = null;
-
-        if (Level_1)
+        //if (Level_1)
+        //{
+        //    spawnPoint = spawnPoints[0];
+        //}
+        //else if (Level_2)
+        //{
+        //    spawnPoint = spawnPoints[1];
+        //}
+        //else if (Level_3)
+        //{
+        //    spawnPoint = spawnPoints[2];
+        //}
+        //else if (Level_3)
+        //{
+        //    spawnPoint = spawnPoints[2];
+        //}
+        //else
+        //{
+        //    Debug.LogError("No spawn point available!");
+        //    return;
+        //}
+        if(GameManager.Instance.Level_Index == 0)
         {
             spawnPoint = spawnPoints[0];
-        }
-        else if (Level_2)
-        {
-            spawnPoint = spawnPoints[1];
-        }
-        else if (Level_3)
-        {
-            spawnPoint = spawnPoints[2];
-        }
-        else if (Level_3)
-        {
-            spawnPoint = spawnPoints[2];
+            playerPrefab.transform.position = spawnPoint.position;
         }
         else
         {
-            Debug.LogError("No spawn point available!");
-            return;
+            NextLevel();
         }
-        playerPrefab.transform.position = spawnPoint.position;
-        //Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
     }
 
     //This function will load the next Level when the level is Completed!
     public void NextLevel()
     {
         //Next Level Condition
+        spawnPoint = spawnPoints[GameManager.Instance.Selected_Level];
+        playerPrefab.transform.position = spawnPoint.position;
     }
 
     //This function will make the current level to reload

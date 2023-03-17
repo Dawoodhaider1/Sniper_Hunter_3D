@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class Scene_Manager : MonoBehaviour
 {
     public Text Coins_Text;
-    //public AudioSource Menu_BG_Audio;
+    public AudioSource Menu_BG_Audio;
 
     private void Start()
     {
-        //Menu_BG_Audio.Play();
+        Menu_BG_Audio.Play();
         Coins_Text.text = GameManager.Instance.Coins.ToString();
     }
 

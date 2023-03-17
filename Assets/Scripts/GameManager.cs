@@ -40,8 +40,8 @@ public class GameManager : MonoBehaviour
         public int Unlocked_Level;
         public int[] unlocked_Levels = new int[14];
         public int coins;
-        //public int[] purchased_Guns = new int[10];
-        //public bool[] purchased = new bool[10];
+        public int[] purchased_Guns = new int[10];
+        public bool[] purchased = new bool[10];
     }
 
     public void SaveUserData()
@@ -49,15 +49,15 @@ public class GameManager : MonoBehaviour
         SaveData data = new SaveData();
         data.Unlocked_Level = Unlocked_Level;
         data.coins = Coins;
-        ////Saving the purchased Guns
-        //for (int i = 0; i < Purchased_Guns.Length; i++)
-        //{
-        //    data.purchased_Guns[i] = Purchased_Guns[i];
-        //}
-        //for (int i = 0; i < Purchased.Length; i++)
-        //{
-        //    data.purchased[i] = Purchased[i];
-        //}
+        //Saving the purchased Guns
+        for (int i = 0; i < Purchased_Guns.Length; i++)
+        {
+            data.purchased_Guns[i] = Purchased_Guns[i];
+        }
+        for (int i = 0; i < Purchased.Length; i++)
+        {
+            data.purchased[i] = Purchased[i];
+        }
 
         string json = JsonUtility.ToJson(data);
 
@@ -74,14 +74,14 @@ public class GameManager : MonoBehaviour
             Unlocked_Level = data.Unlocked_Level;
             Coins = data.coins;
 
-            //for (int i = 0; i < Purchased_Bikes.Length; i++)
-            //{
-            //    Purchased_Bikes[i] = data.purchased_Bikes[i];
-            //}
-            //for (int i = 0; i < Purchased.Length; i++)
-            //{
-            //    Purchased[i] = data.purchased[i];
-            //}
+            for (int i = 0; i < Purchased_Guns.Length; i++)
+            {
+                Purchased_Guns[i] = data.purchased_Guns[i];
+            }
+            for (int i = 0; i < Purchased.Length; i++)
+            {
+                Purchased[i] = data.purchased[i];
+            }
         }
     }
 

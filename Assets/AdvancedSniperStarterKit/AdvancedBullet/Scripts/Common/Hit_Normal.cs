@@ -9,6 +9,7 @@ public class Hit_Normal : AS_BulletHiter
     private NavMeshAgent agent;
     private int death = 0;
     Level_Manager level;
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -43,9 +44,9 @@ public class Hit_Normal : AS_BulletHiter
                 {
                     GamePlay.Instance.UpdateScore();
                     level.Name.RemoveAt(i);
-                    int Reward = Random.Range(200, 500);
-                    GameManager.Instance.Coins = Reward;
-                    GameManager.Instance.SaveUserData();
+                    //Reward = Random.Range(200, 500);
+                    //GameManager.Instance.Coins = Reward;
+                    //GameManager.Instance.SaveUserData();
                 }
             }
           
