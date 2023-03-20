@@ -7,6 +7,7 @@ public class Scene_Manager : MonoBehaviour
 {
     public Text Coins_Text;
     public AudioSource Menu_BG_Audio;
+    public AudioSource ClickSound;
 
     private void Start()
     {
@@ -52,4 +53,8 @@ public class Scene_Manager : MonoBehaviour
         Application.LoadLevel("GamePlay");
     }
 
+    public void ClickSounds()
+    {
+        ClickSound.Play();
+    }
 }

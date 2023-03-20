@@ -13,22 +13,23 @@ public class Level_Manager : MonoBehaviour
     public Text[] LevelTarget;
     int RandAnimal;
     public int count;
+    public int CurrentLevelNumber;
     public List<string> Name = new List<string>();
-    Dictionary<string, int> countDict = new Dictionary<string, int>();
+    //Dictionary<string, int> countDict = new Dictionary<string, int>();
     // Start is called before the first frame update
     void Start()
     {
         spawnManager = FindObjectOfType<SpawnManager>();
-
+        CurrentLevelNumber = GameManager.Instance.Selected_Level + 1;
         TargetAnimals();
     }
 
     IEnumerator LevelData()
     {
-        for(int i = 0; i < count; i++)
+        for(int i = 0; i <= count; i++)
         {
-            LevelNumber[i].text = "Level " + count;
-            LevelTarget[i].text = "Find and Kill a " + string.Join(", ", Name)/*Animals[RandAnimal]*/;
+            LevelNumber[i].text = "Level " + CurrentLevelNumber;
+            LevelTarget[i].text = "Find and Kill a " + string.Join(", ", Name);
             LevelNumber[i].enabled = true;
             LevelTarget[i].enabled = true;
             yield return new WaitForSeconds(3f);
@@ -39,7 +40,7 @@ public class Level_Manager : MonoBehaviour
 
     public void TargetAnimals()
     {
-        count = Tasks[0]; //here [0] is the level count...
+        count = Tasks[GameManager.Instance.Selected_Level]; //here [0] is the level count...
         for (int i = 0; i < count; i++)
         {
             RandAnimal = Random.Range(0, Animals.Length);
