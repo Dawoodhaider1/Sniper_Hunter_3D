@@ -79,11 +79,16 @@ public class GamePlay : MonoBehaviour
         Controls.enabled = true;
     }
 
-    private void Update()
+    public void DisablePlayer()
     {
-        if(PauseMenu.activeSelf == true)
-        {
-            Controls.enabled = false;
-        }
+        Controls.enabled = false;
     }
+
+    //private void Update()
+    //{
+    //    if(PauseMenu.activeSelf == true)
+    //    {
+    //        Controls.enabled = false;
+    //    }
+    //}
 }
