@@ -34,7 +34,7 @@ public class FPSInputControllerMobile : MonoBehaviour {
 		Vector2 touchdir = touchMove.OnTouchDirection (false);
 		FPSmotor.Move (new Vector3 (touchdir.x, 0, touchdir.y));
 		
-		FPSmotor.Jump (Input.GetButton ("Jump"));
+		//FPSmotor.Jump (Input.GetButton ("Jump"));
 		
 		if(touchShoot.OnTouchPress()){
 			gunHanddle.Shoot();	
@@ -42,10 +42,10 @@ public class FPSInputControllerMobile : MonoBehaviour {
 		if(touchZoom.OnTouchRelease()){
 			gunHanddle.ZoomToggle();
 		}
-        if (touchZoom.OnTouchRelease())
-        {
-            FPSmotor.Jump(true);
-        }
+        //if (touchZoom.OnTouchRelease())
+        //{
+        //    FPSmotor.Jump(true);
+        //}
 	}
 	
 	

@@ -9,13 +9,14 @@ public class Level_Manager : MonoBehaviour
     public GameObject[] Levels;
     public int[] Tasks;
     public string[] Animals;
+    public GameObject[] Animals_GameObjects;
     public Text[] LevelNumber;
     public Text[] LevelTarget;
     int RandAnimal;
     public int count;
     public int CurrentLevelNumber;
     public List<string> Name = new List<string>();
-    //Dictionary<string, int> countDict = new Dictionary<string, int>();
+    public List<GameObject> AnimalGameObjects = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
@@ -40,11 +41,16 @@ public class Level_Manager : MonoBehaviour
 
     public void TargetAnimals()
     {
-        count = Tasks[GameManager.Instance.Selected_Level]; //here [0] is the level count...
+        count = Tasks[GameManager.Instance.Selected_Level]; //here [xyz] is the level count...
         for (int i = 0; i < count; i++)
         {
             RandAnimal = Random.Range(0, Animals.Length);
             Name.Add(Animals[RandAnimal]);
+            AnimalGameObjects.Add(Animals_GameObjects[RandAnimal]);
+            foreach (GameObject animals in AnimalGameObjects)
+            {
+                animals.SetActive(true);
+            }
             StartCoroutine(LevelData());
         }
     }

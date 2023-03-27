@@ -105,7 +105,7 @@ public class TouchScreenVal
 				IsPressed = false;	
 			}
 		}
-		return res;
+        return res;
 	}
 	public bool OnTouchRelease ()
 	{
@@ -122,7 +122,7 @@ public class TouchScreenVal
 				IsPressed = false;	
 			}
 		}
-		return res;
+        return res;
 	}
 	
 	
@@ -139,7 +139,8 @@ public class TouchScreenVal
 					controllerPositionTemp = controllerPositionNext;
 					buttonPosition = controllerPositionNext;
 					IsPressed = true;
-				} else {
+                }
+                else {
 					controllerPositionNext = new Vector2 (Input.GetTouch (i).position.x, Screen.height - Input.GetTouch (i).position.y);
 					Vector2 deltagrag = (controllerPositionNext - controllerPositionTemp);
 					direction.x += deltagrag.x;
@@ -148,7 +149,7 @@ public class TouchScreenVal
 						controllerPositionTemp = Vector2.Lerp (controllerPositionTemp, controllerPositionNext, 0.5f);
 					buttonPosition = controllerPositionNext;
 					IsPressed = true;
-				}	
+                }	
 			}
 		}
 		direction.Normalize ();
