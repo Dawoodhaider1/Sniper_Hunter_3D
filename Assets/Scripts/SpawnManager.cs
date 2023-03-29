@@ -18,7 +18,8 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
-        SpawnPlayer();
+        spawnPoint = spawnPoints[GameManager.Instance.Selected_Level];
+        playerPrefab.transform.position = spawnPoint.position;
     }
 
     void SpawnPlayer()
@@ -59,8 +60,9 @@ public class SpawnManager : MonoBehaviour
     public void NextLevel()
     {
         //Next Level Condition
-        spawnPoint = spawnPoints[GameManager.Instance.Selected_Level];
-        playerPrefab.transform.position = spawnPoint.position;
+        GameManager.Instance.Selected_Level++;
+        //spawnPoint = spawnPoints[GameManager.Instance.Selected_Level];
+        //playerPrefab.transform.position = spawnPoint.position;
     }
 
     //This function will make the current level to reload

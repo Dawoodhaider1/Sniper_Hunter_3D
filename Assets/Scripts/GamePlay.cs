@@ -77,18 +77,12 @@ public class GamePlay : MonoBehaviour
     public void EnablePlayer()
     {
         Controls.enabled = true;
+        Debug.Log("Player Enabled");
     }
 
     public void DisablePlayer()
     {
         Controls.enabled = false;
+        Debug.Log("Player Disabled");
     }
-
-    //private void Update()
-    //{
-    //    if(PauseMenu.activeSelf == true)
-    //    {
-    //        Controls.enabled = false;
-    //    }
-    //}
 }
