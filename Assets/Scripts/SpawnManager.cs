@@ -20,6 +20,7 @@ public class SpawnManager : MonoBehaviour
     {
         spawnPoint = spawnPoints[GameManager.Instance.Selected_Level];
         playerPrefab.transform.position = spawnPoint.position;
+        Time.timeScale = 1;
     }
 
     void SpawnPlayer()

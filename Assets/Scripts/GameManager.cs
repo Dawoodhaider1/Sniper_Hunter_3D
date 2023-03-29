@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public int Gun_Number;
     public int Coins;
 
+    public float RemainingTime;
+
     public int[] Purchased_Guns = new int[9];
     public bool[] Purchased = new bool[9];
 

@@ -8,11 +8,15 @@ public class Scene_Manager : MonoBehaviour
     public Text Coins_Text;
     public AudioSource Menu_BG_Audio;
     public AudioSource ClickSound;
+    //public TimerStopwatch stopwatch;
 
     private void Start()
     {
         Menu_BG_Audio.Play();
         Coins_Text.text = GameManager.Instance.Coins.ToString();
+        Time.timeScale = 1;
+        //stopwatch = FindObjectOfType<TimerStopwatch>();
+        //stopwatch.timeRemaining = 30f;
     }
 
     public void ExitGame()

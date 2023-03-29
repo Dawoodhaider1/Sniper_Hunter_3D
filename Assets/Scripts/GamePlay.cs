@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GamePlay : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class GamePlay : MonoBehaviour
     public GameObject WinPanel;
     public GameObject PauseMenu;
 
-    public MonoBehaviour Controls;
+    //public MonoBehaviour Controls;
 
     private void Awake()
     {
@@ -41,6 +42,7 @@ public class GamePlay : MonoBehaviour
     private void Start()
     {
         level_Manager = FindObjectOfType<Level_Manager>();
+        GameManager.Instance.RemainingTime = 300f;
     }
 
     public void UpdateScore()
@@ -70,19 +72,27 @@ public class GamePlay : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         Debug.Log("Level" + level_Manager.count + " Completed");
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         WinPanel.SetActive(true);
     }
 
-    public void EnablePlayer()
+    public void Retry()
     {
-        Controls.enabled = true;
-        Debug.Log("Player Enabled");
+        SceneManager.LoadScene("GamePlay");
+        GameManager.Instance.RemainingTime = 300f;
+        //Application.LoadLevel(Application.loadedLevel);
+        Debug.Log("Retry Level");
     }
 
-    public void DisablePlayer()
-    {
-        Controls.enabled = false;
-        Debug.Log("Player Disabled");
-    }
+    //public void EnablePlayer()
+    //{
+    //    Controls.enabled = true;
+    //    Debug.Log("Player Enabled");
+    //}
+
+    //public void DisablePlayer()
+    //{
+    //    Controls.enabled = false;
+    //    Debug.Log("Player Disabled");
+    //}
 }

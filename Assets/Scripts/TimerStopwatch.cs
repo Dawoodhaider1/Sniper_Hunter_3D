@@ -7,14 +7,22 @@ public class TimerStopwatch : MonoBehaviour
     public GameObject LevelFailedPanel;
     public float startTime = 60f;
 
+    public float timeRemaining = 0;
+
+    void Start()
+    {
+        //timeRemaining = startTime;
+        LevelFailedPanel.SetActive(false);
+    }
+
     void Update()
     {
-        float timeRemaining = startTime - Time.time;
+        timeRemaining = GameManager.Instance.RemainingTime - Time.time;
         if (timeRemaining < 0)
         {
             timeRemaining = 0;
             Debug.Log("Level Failed !");
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             LevelFailedPanel.SetActive(true);
         }
         int minutes = Mathf.FloorToInt(timeRemaining / 60);
