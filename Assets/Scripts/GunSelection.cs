@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GunSelection : MonoBehaviour
 {
     public GameObject[] Guns;
+    public GameObject Guns_GameObject;
     public GameObject Buy_Button;
     public GameObject Select_Button;
     public GameObject[] Purchase_Texts;
@@ -21,6 +22,7 @@ public class GunSelection : MonoBehaviour
 
     void Start()
     {
+        Guns_GameObject.SetActive(true);
         for (int j = 0; j < 9; j++)
         {
             if (GameManager.Instance.Purchased_Guns[j] != 0)
@@ -134,6 +136,7 @@ public class GunSelection : MonoBehaviour
         }
         else
         {
+            Guns_GameObject.SetActive(false);
             NotEnoughMoney.SetActive(true);
         }
     }
