@@ -10,8 +10,10 @@ public class Level_Manager : MonoBehaviour
     public int[] Tasks;
     public string[] Animals;
     public GameObject[] Animals_GameObjects;
+    public GameObject[] Level_Text;
     public Text[] LevelNumber;
     public Text[] LevelTarget;
+    public Text Level_Information;
     int RandAnimal;
     public int count;
     public int CurrentLevelNumber;
@@ -27,15 +29,22 @@ public class Level_Manager : MonoBehaviour
 
     IEnumerator LevelData()
     {
-        for(int i = 0; i <= count; i++)
+        for(int i = 0; i < count; i++)
         {
+            //Text Game Objects set active...
+            Level_Text[i].SetActive(true);
             LevelNumber[i].text = "Level " + CurrentLevelNumber;
-            LevelTarget[i].text = "Find and Kill a " + string.Join(", ", Name);
+            LevelTarget[i].text = "Find and Kill a " + string.Join(", ", Name) + "!";
+            //Information Button set...
+            Level_Information.text = LevelTarget[i].text;
+            //Level Information enabled for few seconds at the start of each level...
             LevelNumber[i].enabled = true;
             LevelTarget[i].enabled = true;
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(5f);
             LevelNumber[i].enabled = false;
             LevelTarget[i].enabled = false;
+            //Text game Objects set inactive...
+            Level_Text[i].SetActive(false);
         }
     }
 
