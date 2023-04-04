@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         //SaveUserData();
-        //LoadUserData();
+        LoadUserData();
     }
 
     [System.Serializable]

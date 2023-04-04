@@ -42,7 +42,7 @@ public class GamePlay : MonoBehaviour
     private void Start()
     {
         level_Manager = FindObjectOfType<Level_Manager>();
-        GameManager.Instance.RemainingTime = 300f;
+        //GameManager.Instance.RemainingTime = 30f;
     }
 
     public void UpdateScore()
@@ -76,13 +76,6 @@ public class GamePlay : MonoBehaviour
         WinPanel.SetActive(true);
     }
 
-    public void Retry()
-    {
-        SceneManager.LoadScene("GamePlay");
-        GameManager.Instance.RemainingTime = 300f;
-        //Application.LoadLevel(Application.loadedLevel);
-        Debug.Log("Retry Level");
-    }
 
     //public void EnablePlayer()
     //{
