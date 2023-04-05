@@ -44,7 +44,7 @@ public class Robot_AI : MonoBehaviour
 
     void RunAway()
     {
-        Debug.Log("Fawn Running away");
+
         anim.SetBool("Run", true);
         anim.SetBool("Walk", false);
         agent.speed = 15f;

@@ -34,17 +34,17 @@ public class Level_Manager : MonoBehaviour
             //Text Game Objects set active...
             Level_Text[i].SetActive(true);
             LevelNumber[i].text = "Level " + CurrentLevelNumber;
-            LevelTarget[i].text = "Find and Kill a " + string.Join(", ", Name) + "!";
+            LevelTarget[i].text = "Find and Kill " + string.Join(", ", Name) + " !";
             //Information Button set...
             Level_Information.text = LevelTarget[i].text;
             //Level Information enabled for few seconds at the start of each level...
             LevelNumber[i].enabled = true;
             LevelTarget[i].enabled = true;
             yield return new WaitForSeconds(5f);
-            LevelNumber[i].enabled = false;
-            LevelTarget[i].enabled = false;
-            //Text game Objects set inactive...
-            Level_Text[i].SetActive(false);
+            //LevelNumber[i].enabled = false;
+            //LevelTarget[i].enabled = false;
+            ////Text game Objects set inactive...
+            //Level_Text[i].SetActive(false);
         }
     }
 

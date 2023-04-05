@@ -23,6 +23,9 @@ public class GamePlay : MonoBehaviour
     public GameObject WinPanel;
     public GameObject PauseMenu;
 
+    public GameObject MiniMap;
+    public GameObject Player;
+
     //public MonoBehaviour Controls;
 
     private void Awake()
@@ -72,20 +75,9 @@ public class GamePlay : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         Debug.Log("Level" + level_Manager.count + " Completed");
-        //Time.timeScale = 0;
+        MiniMap.SetActive(false);
+        Player.SetActive(false);
         WinPanel.SetActive(true);
     }
 
-
-    //public void EnablePlayer()
-    //{
-    //    Controls.enabled = true;
-    //    Debug.Log("Player Enabled");
-    //}
-
-    //public void DisablePlayer()
-    //{
-    //    Controls.enabled = false;
-    //    Debug.Log("Player Disabled");
-    //}
 }
